@@ -1,0 +1,2 @@
+# creditcard
+To design a student credit card which can only be used within the university places like Bookstore, Canteen, Shopping Stores, Utility Stores, Tea Stalls etc. Card will be same as ID Card, but additional QR/Bar Code can be printed on it which can be scanned at stores to get the information of student for making the transaction. Credit limit of Rs. 15000 will be provided to each student which has to be repaid at the end of semester.
