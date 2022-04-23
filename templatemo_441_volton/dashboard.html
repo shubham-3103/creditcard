@@ -1,0 +1,83 @@
+<?php
+$servername="localhost";
+$username="root";
+$password="";
+$database="creditcard";
+
+$conn=mysqli_connect($servername,$username,$password,$database);
+if(!$conn){
+  die("Sorry we failed to connect: ".mysqli_connect_error());
+}
+else{
+  // echo "Connection was successful<br>";
+}
+$sql="SELECT CARD_BALANCE FROM student where LOGIN_ID=student.LOGIN_ID";
+$result=mysqli_query($conn,$sql);
+$num = mysqli_num_rows($result);
+// echo $num;
+
+if($num>0){
+  $row=mysqli_fetch_assoc($result);
+  $balance = $row['CARD_BALANCE'];
+  // echo $balance;
+  // echo var_dump($row);
+  // while($row=mysqli_fetch_assoc($result)){
+  //   echo var_dump($row);
+  //   echo "<br>";
+  // }
+
+}
+?>
+
+
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Volton Free Responsive Template</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- <link rel="stylesheet" href="css/normalize.css"> -->
+        <link rel="stylesheet" href="css/font-awesome.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/templatemo-style.css">
+        <!-- <script src="js/vendor/modernizr-2.6.2.min.js"></script> -->
+        <meta http-equiv="refresh" content="5;url=http://localhost/creditcard/Login_v18/templatemo_441_volton/dashboard.html"/>
+
+    </head>
+    <body>
+        <!-- SIDEBAR -->
+        <!-- <form action="fetch.php" > -->
+            <div class="sidebar-menu hidden-xs hidden-sm">
+                <div class="main-navigation">
+                    <ul class="navigation">
+                        <li><a href="#top"><i class="fa fa-user"></i><b>Name</b></a></li>
+                        <li><a href="#about"><i class="fa fa-pencil"></i><b>Personal Detail</b></a></li>
+                        <li><a href="#projects"><i class="fa fa-globe"></i><b>Transaction at Place</b></a></li>
+                        <li><a href="#contact"><i class="fa fa-newspaper-o"></i><b>Transaction History</b></a></li>
+                        <li><a href="#contact"><i class="fa fa-user"></i><Sb>Transaction Stores</b></a></li>
+                    </ul>
+                </div> <!-- .main-navigation -->
+                
+            </div> <!-- .sidebar-menu -->
+            
+            <div class="balance"> 
+                <h2>Balance</h2>
+                <?php echo $balance; ?>
+            </div>
+            <div class="month">
+                <h2>This Month</h2>
+                <?php
+                    $sql1="SELECT SUM(transactions.AMOUNT) FROM transactions,student where student.CARD_NUMBER=transactions.CARD_NUMBER AND T_DATE BETWEEN '2022-04-01' AND '2022-04-31'";
+                    $result1=mysqli_query($conn,$sql1);
+                    $row1=mysqli_fetch_assoc($result1);
+                    echo implode("",$row1);   
+                ?>
+            </div>
+            <div class="average">
+                <h2>Average Monthly</h2>
+                <h2>year/12</h2>
+            </div>
+        <!-- </form>     -->
+    </body>
+</html>

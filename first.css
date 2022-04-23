@@ -1,0 +1,102 @@
+
+.student{
+    padding: 20px 64px;
+    position: absolute;
+    top: 67%;
+    left: 25%;
+    background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.838), rgba(0, 0, 0, 0.637));
+    border:solid;
+    border-radius: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    
+}
+.admin{
+    padding: 20px 64px;
+    position: absolute;
+    top: 67%;
+    left: 64%;
+    background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.637),rgba(255, 255, 255, 0.838) );
+    border: solid;
+    border-radius: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+}
+.header{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 30px;
+    position: absolute;
+    left: 40%;
+    top: 33.5%;
+    color: rgb(235, 95, 30);
+
+}
+.header2{
+    font-family:  'Times New Roman', Times, serif, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 40px;
+    position: absolute;
+    left: 29%;
+    top: 25%;
+    color: rgb(0, 0, 0);
+
+}
+.header3{
+    font-family:  'Times New Roman', Times, serif, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 40px;
+    position: absolute;
+    left: 42%;
+    top: 33%;
+    color: #000b87;
+
+}
+.welcome{
+    font-family: Arial, sans-serif;
+    font-size: 25px;
+    position: absolute;
+    left: 45.75%;
+    top: 50.5%;
+    color: rgb(56, 56, 56);
+}
+.text{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 25px;
+    position: absolute;
+    left: 35.25%;
+    top: 55%;
+    color: rgb(56, 56, 56);
+}
+.student:hover{
+    padding: 20px 64px;
+    position: absolute;
+    top: 67%;
+    left: 25%;
+    background-image: linear-gradient(45deg, rgb(0, 0, 0), rgb(0, 0, 0));
+    border:solid;
+    border-radius: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    color: aliceblue;
+}
+.admin:hover{
+    padding: 20px 64px;
+    position: absolute;
+    top: 67%;
+    left: 64%;
+    background-image: linear-gradient(45deg, rgb(0, 0, 0), rgb(0, 0, 0));
+    border: solid;
+    border-radius: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    color: rgb(244, 240, 255);
+}
+.img{
+    width: 180px;
+    height: 180px;
+    top: 7.5%;
+    position: absolute;
+    left: 45%;
+}
+.img1{
+    width: 100%;
+    height: 100%;
+}
